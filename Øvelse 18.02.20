@@ -96,15 +96,26 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": 6,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "'return' outside function (<ipython-input-6-6b40f30d1bfc>, line 25)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-6-6b40f30d1bfc>\"\u001b[0;36m, line \u001b[0;32m25\u001b[0m\n\u001b[0;31m    return wordfreq\u001b[0m\n\u001b[0m                   ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m 'return' outside function\n"
+     ]
+    }
+   ],
    "source": [
     "#Answer to question 3.1.3\n",
     "#I want to write a function called word_freq\n",
     "#It has to take in a list of word and count the frequency of each word in the list\n",
     "#The function also has to return a dictionary with the word as the key and the count as the value\n",
     "\n",
+    "word_list = [\"hej\", \"med\", \"dig\"]\n",
+    "type(word_list)\n",
     "\n",
     "def word_freq (word_list): \n",
     "    #Initializing empty dictionary\n",
@@ -123,7 +134,6 @@
     "\n",
     "#Returning the dictionary\n",
     "return wordfreq\n",
-    "\n",
     "    \n"
    ]
   },
@@ -150,24 +160,24 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 47,
+   "execution_count": 7,
    "metadata": {},
    "outputs": [
     {
-     "ename": "NameError",
-     "evalue": "name 'word' is not defined",
+     "ename": "UnboundLocalError",
+     "evalue": "local variable 'wordfreq' referenced before assignment",
      "output_type": "error",
      "traceback": [
       "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
-      "\u001b[0;32m<ipython-input-47-5912d26b9527>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mword_freq\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0memilies_list\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
-      "\u001b[0;32m<ipython-input-46-38f3b7a8a5fc>\u001b[0m in \u001b[0;36mword_freq\u001b[0;34m(word_list)\u001b[0m\n\u001b[1;32m      7\u001b[0m \u001b[0;32mdef\u001b[0m \u001b[0mword_freq\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mword_list\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      8\u001b[0m     \u001b[0;32mfor\u001b[0m \u001b[0mwords\u001b[0m \u001b[0;32min\u001b[0m \u001b[0mword_list\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 9\u001b[0;31m         \u001b[0mword_list\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mcount\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mword\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     10\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     11\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
-      "\u001b[0;31mNameError\u001b[0m: name 'word' is not defined"
+      "\u001b[0;31mUnboundLocalError\u001b[0m                         Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-7-1321b3fa97be>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mword_freq\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mword_list\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;32m<ipython-input-6-6b40f30d1bfc>\u001b[0m in \u001b[0;36mword_freq\u001b[0;34m(word_list)\u001b[0m\n\u001b[1;32m     15\u001b[0m         \u001b[0;31m#checking if we have counted this word already\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     16\u001b[0m         \u001b[0;31m#This is more efficient\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 17\u001b[0;31m         \u001b[0mwordfreq\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mw\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mword_list\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mcount\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mw\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     18\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     19\u001b[0m \u001b[0;31m#Here I should have created a dictionary\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;31mUnboundLocalError\u001b[0m: local variable 'wordfreq' referenced before assignment"
      ]
     }
    ],
    "source": [
-    "print(word_freq(emilies_list))"
+    "print(word_freq(word_list))"
    ]
   },
   {
